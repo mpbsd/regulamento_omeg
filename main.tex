@@ -1,23 +1,66 @@
 \documentclass[a4paper,12pt]{article}
 
-\usepackage{amsthm}
+\usepackage{amsmath,amsthm}
+\usepackage{float}
 \usepackage[acronym]{glossaries}
 \usepackage{hyperref}
+\usepackage[table]{xcolor}
 
 \newacronym{ufg}{UFG}{Universidade Federal de Goiás}
 \newacronym{ime}{IME}{Instituto de Matemática e Estatística}
+\newacronym{face}{FACE}{Faculdade de Administração, Contabilidade e Economia}
 \newacronym{omeg}{OMEG}{Olimpíada de Matemática do Estado de Goiás}
+\newacronym{cpf}{CPF}{Cadastro de Pessoa Física}
+\newacronym{moodle}{Moodle}{Modular Object-Oriented Dynamic Learning Environment}
+\newacronym{inep}{INEP}{Instituto Nacional de Estudos e Pesquisas Educacionais Anísio Teixeira}
 
 \newtheorem{article}{Art.}
 
+\def\url{https://omeg.ime.ufg.br}
+\def\homepage{\href{\url}{\texttt{\url}}}
+
+\def\emailaddres{omeg.ime@ufg.br}
+\def\contactUs{\href{mailto:\emailaddres}{\texttt{\emailaddres}}}
+
+\def\moodleufg{https://pesquisaextensao.ead.ufg.br}
+
+\def\previousEdition{XXXI}
+\def\currentEdition{XXXII}
+
+\def\year{2023}
+
+\def\registrationOpening{01 de agosto de \year}
+\def\registrationClosing{20 de agosto de \year}
+
+\def\publicationOfAprovedRegistrations{05 de setembro de \year}
+
+\def\testingAccessToThePlatformOpeningDate{23 de outubro de \year}
+\def\testingAccessToThePlatformClosingDate{25 de outubro de \year}
+
+\def\fixAccessCredentialsOpeningDate{23 de outubro de \year}
+\def\fixAccessCredentialsClosingDate{25 de outubro de \year}
+
+\def\phaseOne{28 de outubro de \year}
+\def\phaseTwo{11 de novembro de \year}
+
+\def\remoteBasesDisclosureDate{10 de novembro de \year}
+
+\def\resultsFromPhaseOne{31 de outubro de \year}
+\def\resultsFromPhaseTwo{29 de janeiro de 2024}
+
+\def\prizesDay{31 de janeiro de 2024}
+
 \begin{document}
 
-A comissão organizadora da XXXII \acrfull{omeg} torna públicas e faz saber, por meio deste documento, as instruções e informações referentes à realização do evento em 2023.
+A comissão organizadora da \currentEdition{} \acrfull{omeg} torna públicas e
+faz saber, por meio deste documento, as instruções e informações referentes à
+realização do evento em \year.
 
 \begin{article}
-  A \acrshort{omeg} se destina aos alunos regularmente matriculados e cursando o Ensino
-  Fundamental ou Ensino Médio em 2023 em escolas públicas ou particulares do
-  Estado de Goiás, os quais serão divididos em três níveis, a saber:
+  A \acrshort{omeg} se destina aos alunos regularmente matriculados e cursando
+  o Ensino Fundamental ou Ensino Médio em \year{} em escolas públicas ou
+  particulares do Estado de Goiás, os quais serão divididos em três níveis, a
+  saber:
   \begin{description}
     \item[Nível 1] alunos do 6° e 7° anos do Ensino Fundamental I;
     \item[Nível 2] alunos do 8° e 9° anos do Ensino Fundamental II;
@@ -25,63 +68,76 @@ A comissão organizadora da XXXII \acrfull{omeg} torna públicas e faz saber, po
   \end{description}
 \end{article}
 
-\section{DAS INSCRIÇÕES}
+\section*{Das Inscrições}
 
 \begin{article}
-  Cada estabelecimento de ensino poderá inscrever na XXXII \acrshort{omeg}, além dos
-  premiados com medalha de ouro, prata ou bronze na XXXI \acrshort{omeg}, até 10
-  alunos por nível.
+  Cada estabelecimento de ensino poderá inscrever na \currentEdition{}
+  \acrshort{omeg}, além dos premiados com medalha de ouro, prata ou bronze na
+  \previousEdition{} \acrshort{omeg}, até 10 alunos por nível.
 \end{article}
 
 \begin{article}
-  As inscrições serão realizadas no período de 01/08/2023 a 20/08/2023,
-  exclusivamente por meio de formulário eletrônico disponível em
-  https://omeg.ime.ufg.br/.
+  As inscrições serão realizadas no período de \registrationOpening{} a
+  \registrationClosing, exclusivamente por meio de formulário eletrônico
+  disponível em \homepage.
   \begin{description}
     \item[§ 1º]
-      A lista de inscrições homologadas será publicada no site
-      https://omeg.ime.ufg.br/ no dia 05 de setembro de 2023 e o prazo para
-      interposição de recursos será de cinco dias úteis.
+      A lista de inscrições homologadas será publicada no site da
+      \acrshort{omeg}:
+      \begin{center}
+        \homepage
+      \end{center}
+      em \publicationOfAprovedRegistrations{}. O prazo para interposição de
+      recursos é de cinco dias úteis, com início na data de publicação.
   \end{description}
 \end{article}
 
 \begin{article}
   O responsável pela inscrição deverá informar, em formulário específico
   fornecido pela comissão, os seguintes dados:
-  \begin{itemize}
-    \item
-      Estabelecimento de Ensino: nome da escola, código INEP, endereço
-      completo e número de telefone.
-    \item
-      Aluno: nome completo, data de nascimento, CPF, e-mail de contato
-      individual e nível da prova que o aluno realizará, e, caso o aluno
-      necessite de condições especiais para realizar as provas, a descrição
-      detal necessidade.
-  \end{itemize}
+
+  \begin{table}[H]
+    \centering
+    \rowcolors{1}{white}{gray!10}
+    \begin{tabular}{l|l}
+      \textbf{Estabelecimentos de Ensino} & \textbf{Estudantes}                \\
+      \hline
+      Nome do estabelecimento             & Nome completo e data de nascimento \\
+      Código \acrshort{inep}              & \acrshort{cpf}                     \\
+      Endereço completo                   & E-mail                             \\
+      Telefone para contato               & Nível da prova
+    \end{tabular}
+  \end{table}
+
   \begin{description}
     \item[§ 1º]
       As inscrições de alunos que contenham dados incompletos, incorretos ou
       duplicados não serão realizadas.
     \item[§ 2º]
-      Caso o aluno não possua CPF é permitido o uso do CPF de um de seus
-      responsáveis.
+      Caso o aluno não possua \acrshort{cpf} é permitido o uso do
+      \acrshort{cpf} de um de seus responsáveis.
+    \item[§ 2º]
+      Caso o aluno necessite de condições especiais para realizar as provas,
+      a descrição de tal necessidade deverá ser informada no ato da inscrição.
   \end{description}
 \end{article}
 
 \begin{article}
-  O aluno deve verificar seu acesso à plataforma Moodle no período de
-  16/10/2023 a 23/10/2023, conforme instruções disponibilizadas em:
-  https://omeg.ime.ufg.br/ . É impreterível que no primeiro acesso, o aluno
-  atualize o perfil com uma foto recente e com o nome completo.
+  O aluno deve verificar seu acesso à plataforma \acrshort{moodle} no período
+  de \testingAccessToThePlatformOpeningDate{} a
+  \testingAccessToThePlatformClosingDate, conforme instruções disponibilizadas
+  em: \homepage. É impreterível que no primeiro acesso, o aluno atualize o
+  perfil com uma foto recente e com o nome completo.
   \begin{description}
     \item[§ 1º]
       Caso o aluno não consiga realizar o acesso à plataforma ou deseje
-      solicitar a correção de algum dado, a solicitação deve ser feita no período de
-      23/10/2023 a 25/10/2023 pelo e-mail omeg.ime@ufg.br.
+      solicitar a correção de algum dado, a solicitação deve ser feita no
+      período de \fixAccessCredentialsOpeningDate{} a
+      \fixAccessCredentialsClosingDate{} pelo e-mail \contactUs.
     \item[§ 2º]
-      Solicitações de acesso à plataforma Moodle ou correções enviadas
-      após o dia 25/10/2023 não serão consideradas e o aluno poderá ter sua
-      inscrição cancelada.
+      Solicitações de acesso à plataforma \acrshort{moodle} ou correções
+      enviadas após o dia \fixAccessCredentialsClosingDate{} não serão
+      consideradas e o aluno poderá ter sua inscrição cancelada.
   \end{description}
 \end{article}
 
@@ -91,36 +147,46 @@ A comissão organizadora da XXXII \acrfull{omeg} torna públicas e faz saber, po
   formulário de inscrição.
 \end{article}
 
-\section{DASPROVAS}
+\section*{Das Provas}
 
 \begin{article}
-  A XXXII \acrshort{omeg} será realizada em duas etapas:online e presencial.
+  A \currentEdition{} \acrshort{omeg} será realizada em duas etapas: remota,
+  através da Internet, e presencial, nas dependências da \acrshort{ufg}.
 \end{article}
 
 \begin{article}
-  A primeira etapa será realizada online via plataforma Moodle Ipê UFG
-  (https://ead.ufg.br/) dia 28/10/2023, das 14:00 às 17:00 horas.
+  A primeira etapa será realizada de maneira remota pelo \acrshort{moodle} Ipê
+  da \acrshort{ufg}:
+  \begin{center}
+    \href{\moodleufg}{\moodleufg}
+  \end{center}
+  dia \phaseOne, das 14:00 às 17:00 horas.
   \begin{description}
     \item[§ 1º]
       Esta etapa consistirá de 10 questões de múltipla escolha, cada uma com
-      valor de 1 ponto, e sua correção será feita, automaticamente, pela plataforma
-      Moodle Ipê UFG.
+      valor de 1 ponto, e sua correção será feita, automaticamente, pela
+      plataforma \acrshort{moodle} Ipê da \acrshort{ufg}.
     \item[§ 2º]
       No dia da prova será aberta uma sala virtual para identificação e
       monitoramento dos alunos durante o período de realização da prova. O
       aluno que não estiver presente na sala virtual no horário de início da
       prova, será considerado desclassificado.
     \item[§ 3º]
-      O link para acessar a sala será disponibilizado na página
-      https://omeg.ime.ufg.br/.
+      O link para acessar a sala será disponibilizado em:
+      \begin{center}
+        \homepage
+      \end{center}
     \item[§ 4º]
       O fiscal responsável pela sala fará a primeira chamada às 13:50 e a
       última chamada às 14:10. O aluno deve estar em posse de um documento de
-      identificação durante toda a realização da prova. Caso o aluno não responda
-      anenhumadaschamadas,eleseráconsideradodesclassificado.
+      identificação durante toda a realização da prova. Caso o aluno não
+      responda a pelo menos uma das chamadas, estará desclassificado.
     \item[§ 5º]
-      Os resultados serão divulgados na página https://omeg.ime.ufg.br/, no dia
-      31/10/2023.
+      Os resultados serão divulgados na página
+      \begin{center}
+        \homepage
+      \end{center}
+      em \resultsFromPhaseOne.
     \item[§ 6º]
       Os alunos serão classificados em ordem decrescente de nota, e será
       estabelecida uma nota de corte para cada nível, que será disponibilizada
@@ -130,15 +196,16 @@ A comissão organizadora da XXXII \acrfull{omeg} torna públicas e faz saber, po
       nível, com notas maiores ou iguais à nota de corte.
     \item[§ 8º]
       A lista de alunos convidados para segunda fase será disponibilizada na
-      página https://omeg.ime.ufg.br/ constando apenas os nomes em ordem
+      página \homepage constando apenas os nomes em ordem
       alfabética.
   \end{description}
 \end{article}
 
 \begin{article}
-  A segundaetapaserárealizada dia 11/11/2023, das 14:00 às 18:00 horas de
-  forma presencial no campus Samambaia da UFG e nos pólos de aplicação
-  virtuais divulgados até dia 10/11/2023 via site da \acrshort{omeg}.
+  A segunda etapa será realizada no dia \phaseTwo, das 14:00 às 18:00 horas
+  de forma presencial no campus Samambaia da \acrshort{ufg} e nos pólos de
+  aplicação virtuais divulgados até dia \remoteBasesDisclosureDate{} via site
+  da \acrshort{omeg}.
   \begin{description}
     \item[§ 1º]
       Esta etapa consistirá de quatro questões dissertativas, cada uma com
@@ -151,22 +218,25 @@ A comissão organizadora da XXXII \acrfull{omeg} torna públicas e faz saber, po
     \item[§ 3º]
       Na segunda etapa, a comissão organizadora da \acrshort{omeg} divulgará os
       locais de realização da prova através de comunicado na página
-      (https://omeg.ime.ufg.br)
+      (\homepage)
     \item[§ 4º]
       Os alunos de cada nível serão classificados em ordem decrescente de
       nota para estabelecer as premiações.
       DAPREMIAÇÃO
     \item[§ 5º]
-      O resultado final com a lista de medalhistas premiados e menções
-      honrosas será divulgado na data de 29/01/2024 via página
-      https://omeg.ime.ufg.br/.
+      O resultado final com a lista de medalhistas e menções honrosas será
+      divulgado na página da \acrshort{omeg}:
+      \begin{center}
+        \homepage
+      \end{center}
+      em \resultsFromPhaseTwo.
     \item[§ 6º]
-      A cerimônia de premiação será realizada dia 31/01/2024 às 09:00 no
+      A cerimônia de premiação será realizada dia \prizesDay às 09:00 no
       auditório da Biblioteca Central localizado no campus Samambaia da UFG.
   \end{description}
 \end{article}
 
-\section{DISPOSIÇÕES FINAIS}
+\section*{Disposições Finais}
 
 \begin{article}
   Qualquer fato novo, omissão, dúvida ou caso fortuito oriundo do presente
@@ -174,27 +244,31 @@ A comissão organizadora da XXXII \acrfull{omeg} torna públicas e faz saber, po
 \end{article}
 
 \begin{article}
-  Ao aceitar participar da XXXII \acrshort{omeg}, os estabelecimentos de ensino, os
+  Ao aceitar participar da \currentEdition \acrshort{omeg}, os estabelecimentos de ensino, os
   responsáveis pelos alunos menores de idade e os alunos maiores de idade
   aceitam o presente regulamento e as condições em questão.
 \end{article}
 
-Goiânia, 28 de julho de 2023.
-Comissão Organizadora
+\flushright{Goiânia, 28 de julho de \year}
 
-\begin{tabular}{ll}
-  Profa. Dra. Rosane Gomes Pereira (coordenadora da comissão organizadora)                & Instituto de Matemática e Estatística – UFG\\
-  Prof. Dr. Otávio Marçal Leandro Gomide (vice-coordenador da comissão organizadora)      & Instituto de Matemática e Estatística – UFG\\
-  Prof. Dr. Tiago Moreira Vargas (presidente comissão de elaboração e correção de provas) & Instituto de Matemática e Estatística – UFG\\
-  Prof. Dr. Marcelo Bezerra Barboza (coordenador de inscrições)                           & Instituto de Matemática e Estatística – UFG\\
-  Prof. Dra. Adriana Araujo Cintra (coordenadora de divulgação)                           & Instituto de Matemática e Estatística – UFG\\
-  Profa. Dra. Ana Paula de Araújo Chaves                                                  & Instituto de Matemática e Estatística – UFG\\
-  Prof. Dr. Francisco Bruno de Lima Holanda                                               & Faculdade de Administração, Contabilidade e Economia – UFG\\
-  Prof. Dr. Gregory Duran Cunha                                                           & Instituto de Matemática e Estatística – UFG\\
-  Profa. Dra. Kamila da Silva Andrade                                                     & Instituto de Matemática e Estatística – UFG\\
-  Prof. Dr. Luiz Fernando Gonçalves                                                       & Instituto de Matemática e Estatística – UFG\\
-  Prof. Dr. Valdivino Vargas Júnior                                                       & Instituto de Matemática e Estatística – UFG\\
-  Mislene da Silva Gomes & Técnica-Administrativa – UFG
-\end{tabular}
+\section*{Comissão Organizadora}
+
+\begin{table}[H]
+  \centering
+  \begin{tabular}{llll}
+    Profa. & Dra. & Rosane Gomes Pereira\footnote{coordenadora da comissão organizadora}                  & \acrshort{ime}  \\
+    Prof.  & Dr.  & Otávio Marçal Leandro Gomide\footnote{vice-coordenador da comissão organizadora}      & \acrshort{ime}  \\
+    Prof.  & Dr.  & Tiago Moreira Vargas\footnote{presidente comissão de elaboração e correção de provas} & \acrshort{ime}  \\
+    Prof.  & Dr.  & Marcelo Bezerra Barboza\footnote{coordenador de inscrições}                           & \acrshort{ime}  \\
+    Prof.  & Dra. & Adriana Araujo Cintra\footnote{coordenadora de divulgação}                            & \acrshort{ime}  \\
+    Profa. & Dra. & Ana Paula de Araújo Chaves                                                            & \acrshort{ime}  \\
+    Prof.  & Dr.  & Francisco Bruno de Lima Holanda                                                       & \acrshort{face} \\
+    Prof.  & Dr.  & Gregory Duran Cunha                                                                   & \acrshort{ime}  \\
+    Profa. & Dra. & Kamila da Silva Andrade                                                               & \acrshort{ime}  \\
+    Prof.  & Dr.  & Luiz Fernando Gonçalves                                                               & \acrshort{ime}  \\
+    Prof.  & Dr.  & Valdivino Vargas Júnior                                                               & \acrshort{ime}  \\
+    TAE    &      & Mislene da Silva Gomes                                                                & \acrshort{ime}
+  \end{tabular}
+\end{table}
 
 \end{document}
